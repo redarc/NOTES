@@ -1,0 +1,14 @@
+
+1.MySQL workbench
+MODEL - 物理模型
+EER - Diagram 增强型关系数据库  依附于 MODEL
+TABLE - 表依附于 EER
+Columns - 从属于Table
+
+PK - Belong to a primary key
+NN - Not NULL
+UQ - Unique index
+BIN - Is binary column
+UN - Unsigned date type
+ZF - Fill up value for that coloums with 0's if it's numberic
+AI - Auto Incremental
