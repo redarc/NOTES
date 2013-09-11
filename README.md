@@ -1,0 +1,4 @@
+NOTES
+=====
+
+Tech learn notes
