@@ -1,0 +1,16 @@
+1.Replace tab character with 4 white characters
+2.make sure that your git configuration-User Settings is
+same as the information you registed in Gerrit.
+3.commit
+  3.1 first commit for one artf
+      click computer change-Id for Gerrit Code Review
+      type commit information as code review title
+  3.2 follow-up commit for one artf
+      click ammend commit
+      type commit information as code review title
+  3.3 follow-up commit for another artf
+      Go to Gerrit - changes - code review item - copey changed id
+      paster changed-Id as commit message
+  changed-Id == code review item
+  amend commit == accumlate changes compared with based version
+summit
