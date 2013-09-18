@@ -1,0 +1,31 @@
+1.SWT API结构
+ layout
+ widget
+   control
+   item
+ event
+ graphics
+   resource
+   display 单线程 事件驱动
+   
+2.JFace 结构
+ Viewer
+   ListViewer
+   TableViewer
+   TreeViewer
+ Resource Registry
+ Field Assist
+ Action & Contribution
+ Dialog, Wizard Page, Preference Page
+ Data Binding
+ 
+3.Swing
+JButton ButtonUI
+   
+Display default只有一个，新的display会覆盖之前的display
+
+public static Display getThreadDisplay(){
+	return Display.getCurrent() == null ? new Display():Display.getCurrent();
+} 
+
+shell代表一个窗口
