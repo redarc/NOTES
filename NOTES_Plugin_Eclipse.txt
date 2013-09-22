@@ -1,4 +1,4 @@
-1.SWT API结构
+3.1.SWT API结构
  layout
  widget
    control
@@ -8,7 +8,7 @@
    resource
    display 单线程 事件驱动
    
-2.JFace 结构
+3.2.JFace 结构
  Viewer
    ListViewer
    TableViewer
@@ -19,7 +19,7 @@
  Dialog, Wizard Page, Preference Page
  Data Binding
  
-3.Swing
+3.3.Swing
 JButton ButtonUI
    
 Display default只有一个，新的display会覆盖之前的display
@@ -29,3 +29,48 @@ public static Display getThreadDisplay(){
 } 
 
 shell代表一个窗口
+3.4.Control 继承结构
+
+widget
+  item
+     TableItem
+  control
+     Scrollable
+	    Composite
+		    Tree
+			Table
+			Canvas
+			    Decorations
+				    Shell
+		Text
+	 Button
+	 Label
+	 
+3.5.资源释放
+  5.1 控件资源尽量自动释放，不要手动释放控件资源
+  5.2 Color 若是自己new出来的要自己释放，若是从getSystemColor得到自动释放
+  5.3 Image new出来的自己释放，getSystemImage 自动释放
+  5.4 Font new出来的自己释放，getSystemFont 自动释放
+
+3.6.系统托盘
+  Display.getSystemTray
+  TrayItem
+3.7.Region 用户创建不规则窗口
+
+Chapter4 控件
+4.1 Button
+interface SelectionListener
+必须实现所有接口
+abstract class SelectionAdapter
+选择需要重载的接口即可
+
+button.addSelectionListener(new SelectionAdapter(){
+	public void widgetSelected(SelectionEvent e){		
+	}
+})
+
+4.2 Label
+Label不可同时显示图片和文件，只显示其中一者
+separate 用户分隔符
+
+4.3 Text
