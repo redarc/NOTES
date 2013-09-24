@@ -12,3 +12,4 @@ BIN - Is binary column
 UN - Unsigned date type
 ZF - Fill up value for that coloums with 0's if it's numberic
 AI - Auto Incremental
+

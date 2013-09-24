@@ -74,3 +74,67 @@ Label不可同时显示图片和文件，只显示其中一者
 separate 用户分隔符
 
 4.3 Text
+
+4.5 Combo
+4.6 ToolBar
+4.7 Menu
+ 窗口菜单
+    SWT不支持同一窗口多个菜单栏，但可以有多个Menu实例，让shell.setMenuBar来选择
+ 右键菜单
+4.8 Coolbar
+4.9 Tabfield
+4.10 MessageBox
+     FileDialog
+	 DirectoryDialog
+	 ColorDialog
+	 FontDialog
+5.1 Composite & Group
+    Composite 用于自定义控件
+	Group 用户分组分块 左上角有title
+	
+5.2 Shell
+    APPLICATION_MODEL
+	阻塞同Display的所有窗口
+	
+	PRIMARY_MODEL
+	阻塞父窗口
+	
+	Active
+	Close
+	Deactivate
+	Deiconify 从最小化恢复
+	Iconify 最小化
+	
+5.3 Context—Menu 上下文菜单
+    Shell.setMenu(new Menu(shell,SWT.POP_UP));
+
+5.4 容器颜色、背景鼠标指针
+    setBackground
+	setBackgroundImage
+	setBackgroundMode 对子控件作用
+	
+	Cursor new出来的需要手动释放
+	setCursor
+	dispose
+5.5 布局管理
+    shell.setLayout()
+    场合在窗口大小变化时 必须显示调用shell.layout方法
+	*Gridlayout 划分网格 numColumn列数 numColumn和子控件个数 control.setLayoutData(new GridData(SWT.FILL, ))
+	   先左后右，由上到下
+	   GridData 6参数
+	        水平对齐
+			垂直对齐
+			占用水平剩余空间
+			占用垂直剩余空间
+			水平跨列数
+			垂直跨行数
+			widthHint
+			heightHint 强制控制大小
+	AbsoluteLayout
+	FillLayout 一行/一列 顺序排列
+	RowLayout  一行/一列 但可以指定控件大小
+	StackLayout
+	FormLayout 相对位置
+ 
+11.5 视图操作
+
