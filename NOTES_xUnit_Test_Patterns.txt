@@ -1,0 +1,7 @@
+Test Double
+--Concept:
+Dummy Object - Compile
+Test Stub - Run test
+Test Spy - Test Return Result
+Mock Object - Test Untrusted object
+Fake Object - Full implement fake object
